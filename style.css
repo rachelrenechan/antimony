@@ -4,12 +4,40 @@ body, html {
     background: #f7f7f7;
 }
 
-.bg_cover {
+/* .bg_cover {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 100vh;
+} */
+
+.bg_cover {
+    background-image: url("https://cdn.pixabay.com/photo/2018/06/30/09/31/background-image-3507320__340.jpg");
+
+    /* Set a specific height */
+    /* height: 100vh;  */
+    height: 100%;
+    /* width: 100%; */
+    left: 0;
+    right: 0;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
+
+.bg_cover::after {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #292B2C;
+    opacity: 0.5;
+    position: absolute;
+}
+
 
 .header_style {
     position: absolute;
@@ -23,22 +51,25 @@ body, html {
 .navbar {
     z-index: 3; 
     background: transparent !important; 
+    position: absolute;
+    width: 100%;
 }
 
 .logo_text {
     font-size: 1.25em;
     font-weight: 500;
-    color: #f7f7f7 !important;
+    color: black !important;
     z-index: 3;
 }
 
 a {
     font-size: 1rem;
-    color: #f7f7f7  !important;
+    color: black  !important;
     z-index: 3 !important;
 }
 
 .header_title {
+    position: absolute;
     margin: auto;
     height: 100%;
     width: 100%;
@@ -46,7 +77,8 @@ a {
     justify-content: center;
     align-items:  center;
     z-index: 2;
-    background: #f7f7f7;
+    /* background: #f7f7f7; */
+    top:100px;
 }
 
 .header_title > h1 {
@@ -152,7 +184,7 @@ h5 {
 .author_box_con > .row > p {
     text-align: center;
     color: #555555;
-    padding: 0 140px 0 140px;
+    padding: 0 15% 0 15%;
 }
 
 .author_box_con > ul {
@@ -230,4 +262,11 @@ p {
     /* .section { */
         /* max-width: 66.666667% !important; */
     /* } */
+}
+
+.parallax-window {
+    min-height: 600px;
+    /* height: 100%; */
+    background: transparent;
+    z-index: 1 !important;
 }
