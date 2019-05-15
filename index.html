@@ -22,70 +22,38 @@
        <!-- style.css -->
        <link rel="stylesheet" href="style.css">
 
-    <title>Header Absolute</title>
+    <title>Blog</title>
 
   </head>
 
   <body>
-    
-    <!-- background cover image -->
-    <!-- <img src="bg_cover/1920x1080.png" class="bg_cover rellax" data-rellax-speed="10"> -->
-    <!-- <img src="bg_cover/1920x1080.png" class="bg_cover parallax-window" data-parallax="scroll"> -->
-    <!-- <div class="parallax-window bg_cover" data-parallax="scroll" data-image-src="bg_cover/1920x1080.png"></div> -->
-    <!-- <img src="bg_cover/1920x1080.png" class="bg_cover"> -->
 
+    <!-- Navbar -->
 
-  
-
-    <!-- header style -->
-    <!-- <img src="bg_colors/292B2C.png" class="header_style rellax" data-rellax-speed="10"> -->
-    <!-- <img src="bg_colors/292B2C.png" class="header_style parallax-window" data-rellax="scroll"> -->
-    <!-- <div class="parallax-window header_style" data-parallax="scroll"  data-image-src="bg_colors/292B2C.png"></div> -->
-    
-
-
-    <!-- navbar -->
-    <nav class="navbar navbar-absolute-dark">
+    <nav class="navbar fixed-top">
         
-          <div class="container-fluid nav_con" style="padding-top: 10px; padding-bottom: 10px;">
-                <div class="col-3">
-                    <a class="navbar-brand justify-content-start logo_text" href="#">Antimony</a>
-                </div>
-                <div class="col-5">
-                <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Departments</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Collection</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sale</a>
-                    </li>
-                </ul>
-                </div>
-                <div class="col-4">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">My account</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#"></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"></a>
-                        </li>
-                    </ul>
-                </div>
-                </div>
-              </nav>
-              <!-- end of navbar -->
+      <div class="container-fluid nav_con">
+            <div class="col-4">
+                <a class="navbar-brand justify-content-start logo_text" href="#">Antimony</a>
+            </div>
+            <div class="col-8">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+            </ul>
+            </div>
+            </div>
+          </nav> 
               
               <!-- <div class="bg_cover">
               </div> -->
@@ -114,39 +82,47 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id. Nunc pulvinar sapien et ligula ullamcorper malesuada. Sit amet justo donec enim diam. Diam maecenas sed enim ut sem viverra aliquet. Lectus quam id leo in vitae turpis massa.</p>
                 </div>
               </div>
+              <div class="container tags_con">
+                <div class="row">
+                    <h5 class="font-weight-light">TAGS</h5>
+                </div>
+                <div class="row">
+                    <p>Tech, Code, Software</p>
+                </div>
+            </div>
+
+
             </div>
               
-              <!-- Tags section -->
-              <div class="section">
-              <div class="container tags_con">
-                  <div class="row">
-                      <h5 class="font-weight-light">TAGS</h5>
-                  </div>
-                  <div class="row">
-                      <p>Tech, Code, Software</p>
-                  </div>
-              </div>
-            </div>
+              
+            <hr class="hr_divider">
 
-              <hr class="hr_divider">
 
               <!-- Social Sharing -->
+              <div class="section">
               <div class="container social_share_con">
                 <div class="row social_share_title">
                   <h5 class="h5_margin_bottom">Share the love</h5>
                 </div>
                 <div class="row social_share_btn">
-                <button class="btn btn_share btn_share_fb" type="button">
+                <div class="col-sm-12 col-md-4">                 
+                <button class="btn btn_share btn_share_fb btn-ctm" type="button">
                   <span class="btn_text">SHARE ON FACEBOOK</span>
                 </button>
-                <button class="btn btn_share btn_share_twitter" type="button">
+                </div> 
+                <div class="col-sm-12 col-md-4">
+                <button class="btn btn_share btn_share_twitter btn-ctm" type="button">
                   <span class="btn_text">SHARE ON TWITTER</span>
                 </button>
-                <button class="btn btn_share btn_share_google" type="button">
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <button class="btn btn_share btn_share_google btn-ctm" type="button">
                   <span class="btn_text">SHARE ON GOOGLEPLUS</span>
                 </button>
+              </div>
                 </div>
               </div>
+            </div>
               <!-- End of social sharing -->
 
               <hr class="hr_divider">
@@ -261,7 +237,26 @@
 
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.9.1/rellax.min.js"></script>
     <script>
-        // var rellax = new Rellax('.rellax');
+        $(function () {
+  $(document).scroll(function () {
+    var $nav = $(".fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".logo_text");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $("a");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
     </script>
   </body>
 </html>
